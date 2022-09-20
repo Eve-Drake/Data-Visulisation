@@ -1,40 +1,21 @@
 import React from 'react'
-import DeleteDataPoint from './DeleteDataPoint'
-import EditDataPoint from './EditDataPoint'
-import {
-    LineChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    Legend
-  } from "recharts";
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip} from "recharts";
 
-const RenderData = ({dataArray, setDataArray}) => {
+const RenderData = ({dataArray}) => {
     
   return (
     <div>
-        <div>
-            {dataArray.map((dataObj)=>(
-                <div key={dataObj.id}>
-                    <p>{dataObj.data}</p>
-                    <DeleteDataPoint dataArray={dataArray} setDataArray={setDataArray} id={dataObj.id}/>
-                    <EditDataPoint dataArray={dataArray} setDataArray={setDataArray} id={dataObj.id}/>
-                </div>
-            ))}
-        </div>
         <div>
             <LineChart
                 width={500}
                 height={300}
                 data={dataArray}
                 margin={{
-                    top: 5,
-                    right: 30,
-                    left: 20,
-                    bottom: 5
-                }}>
+                        top: 5,
+                        right: 30,
+                        left: 20,
+                        bottom: 5
+                        }}>
                 <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="Id" />
                     <YAxis />

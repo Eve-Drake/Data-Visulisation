@@ -1,11 +1,18 @@
-.App {
-  text-align: center;
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .show{
   display: block;
 }
 
 .hide{
   display: none;
+}
+
+.container{
+  display: flex;
+}
+
+h1{
+  text-align: center;
 }
