@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import RenderData from './RenderData'
+import {useState} from 'react'
+import AddDataPoint from './AddDataPoint'
+
 
 function App() {
+  const [dataArray, setDataArray] =  useState([
+    {id: 1, data: 1},
+    {id: 2, data: 6}
+  ])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RenderData dataArray={dataArray} setDataArray={setDataArray}/>
+      <AddDataPoint setDataArray={setDataArray} dataArray={dataArray}/>
     </div>
   );
 }
