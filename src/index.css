@@ -1,5 +1,6 @@
 *{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
 }
 .show{
   display: block;
@@ -15,4 +16,33 @@
 
 h1{
   text-align: center;
+}
+
+.dataPoint{
+  border: 1px solid black;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+}
+
+.data{
+  width: 80%;
+}
+
+.controlButtons{
+  display: flex;
+}
+
+.controlButtons button{
+  width: 50px;
+  background: none;
+  border: 1px solid grey;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+.controlButtons button:hover{
+  cursor: pointer;
+  background-color: lightgray;
 }

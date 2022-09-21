@@ -6,21 +6,21 @@ const RenderData = ({dataArray}) => {
   return (
     <div>
         <div>
-            <LineChart
-                width={500}
-                height={300}
-                data={dataArray}
-                margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 5
-                        }}>
-                <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="Id" />
-                    <YAxis />
-                    <Tooltip />
-                    <Line
+              <LineChart
+                  width={400}
+                  height={400}
+                  data={dataArray}
+                  margin={{
+                          top: 5,
+                          right: 30,
+                          left: 20,
+                          bottom: 5
+                          }}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="Id" />
+                      <YAxis />
+                      <Tooltip />
+                      <Line
                         type="monotone"
                         dataKey="data"
                         stroke="#8884d8"

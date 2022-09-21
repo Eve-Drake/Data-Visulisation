@@ -6,10 +6,15 @@ const DataList = ({dataArray, setDataArray}) => {
   return (
     <div>
         {dataArray.map((dataObj)=>(
-            <div className='dataPoints' key={dataObj.id}>
+            <div className='dataPoint' key={dataObj.id}>
+              <div className='data'>
                 <p>{dataObj.data}</p>
+              </div>
+              <div className='controlButtons'>
                 <DeleteDataPoint dataArray={dataArray} setDataArray={setDataArray} id={dataObj.id}/>
                 <EditDataPoint dataArray={dataArray} setDataArray={setDataArray} id={dataObj.id}/>
+              </div>
+
             </div>
         ))}
     </div>
