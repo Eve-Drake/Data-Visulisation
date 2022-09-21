@@ -2,14 +2,14 @@ import React from 'react'
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip} from "recharts";
 
 const RenderData = ({dataArray}) => {
-    
+  const data = dataArray //Helps Rechart keep track of data -- prevents boundry errors on graph
   return (
     <div>
         <div>
               <LineChart
                   width={400}
                   height={400}
-                  data={dataArray}
+                  data={data}
                   margin={{
                           top: 5,
                           right: 30,
